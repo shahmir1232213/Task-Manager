@@ -1,0 +1,122 @@
+/* 🔹 Full Screen Animation (Fade & Slide In) */
+.full-screen-task {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #1c1c1c; /* Dark theme background */
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹 Header Animation */
+.header2 {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  font-weight: bold;
+  background: black;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px rgba(255, 255, 255, 0.2);
+
+  /* Animation */
+  animation: fadeIn 1s ease-in-out 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* 🔹 Tasks Container */
+.TasksContainer {
+  width: 80%;
+  max-width: 1200px;
+  background: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* 🔹 Task Box Animation */
+.Tasks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  margin-top: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔹 Staggered Delay for Each Task */
+.Tasks:nth-child(1) { animation-delay: 0.2s; }
+.Tasks:nth-child(2) { animation-delay: 0.4s; }
+.Tasks:nth-child(3) { animation-delay: 0.6s; }
+.Tasks:nth-child(4) { animation-delay: 0.8s; }
+
+/* 🔹 Alternating Task Colors */
+.Tasks:nth-child(4n+1) { background-color:#f7c941; }
+.Tasks:nth-child(4n+2) { background-color:rgba(154, 252, 134, 0.753) }
+.Tasks:nth-child(4n+3) { background-color: rgba(250, 128, 128, 0.877) }
+.Tasks:nth-child(4n+4) { background-color: rgb(69, 138, 230) }
+
+/* 🔹 Hover Effect */
+.Tasks:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+/* 🔹 Text Styles */
+p {
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+}
