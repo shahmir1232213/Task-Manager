@@ -9,6 +9,7 @@ import EmployeesDashboard from './components/DashBoard/EmployeesDashboard'
 import {AuthContext} from './context/AuthProvider'
 import {Route,Routes} from 'react-router-dom'
 import AllTask from './components/others/AllTask'
+import Heading from './components/others/heading'
 
 const App = () => {
   useEffect(()=>{
@@ -43,6 +44,7 @@ const App = () => {
   } 
   return (
    <> 
+   <Heading />
     {!user ? <Login handleLogin={handleLogin} />:
     user =='admin' ? <AdminDashBoard /> :< EmployeesDashboard employFound={employFound}/>} 
     <Routes>
