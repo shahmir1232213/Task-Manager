@@ -44,7 +44,7 @@ const App = () => {
   } 
   return (
    <> 
-   <Heading />
+   
     {!user ? <Login handleLogin={handleLogin} />:
     user =='admin' ? <AdminDashBoard /> :< EmployeesDashboard employFound={employFound}/>} 
     <Routes>

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import {AuthContext} from '../../context/AuthProvider'
+import Heading from '../others/heading';
 
 const Login = (props) => {
     let [email,setEmail] = useState('');
@@ -15,6 +16,7 @@ const Login = (props) => {
     }
     return (
     <div>
+        <Heading />
         <div className='login'>
             <form className='login-form' onSubmit={submitHandler}>
                 <input value={email} required type='email' placeholder='Enter email' className='login-details login-details2'
